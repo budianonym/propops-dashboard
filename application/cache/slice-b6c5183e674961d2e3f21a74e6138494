@@ -1,0 +1,140 @@
+a:3:{s:4:"time";i:1573176508;s:3:"ttl";i:3600;s:4:"data";s:5374:"<!-- End Page Header -->
+<div class="row">
+	<div class="col-xl-12">
+		<!-- Default -->
+		<div class="widget has-shadow">
+			<div class="widget-header bordered no-actions d-flex align-items-center">
+				<h4></h4>
+				
+				
+				<button type="button" class="badge badge-info btn" data-toggle="modal" data-target="#modal-large">How to Get Your Browser Cookies</button>
+				
+			</div>
+			<div class="widget-body">
+				<h6 align="center" class="text-muted font-italic">This Tool Require Your Browser Cookie. Click <i>Button Above</i> For Details</h6>
+				<!-- begin section -->
+				<!--  -->
+				<!-- <br>
+				<h6 align="center" class="text-muted font-italic">This table shows all properties number each Status.</h6> -->
+				<form method="post">
+					<div class="form-group">
+						<!-- <label for="account_name">Account Name</label> -->
+						<label for="account_name">Expedia ID</label>
+						<input type="text" class="form-control" id="account_name" name="id" placeholder="Expedia ID/s(Separated by comma). Example: 36839674,36980016,36806944,36806883,36806906"autocomplete="off" value="<?php issetbutton("id");?>"required>
+						  <div class="mb-3">
+    <label for="cookiee">Cookie</label>
+    <textarea class="form-control " name="cookiee" id="cookiee" placeholder="Paste the Cookies Here" required><?php issetbutton("cookiee");?></textarea>
+    <div class="invalid-feedback">
+      Please put the cookie before submit.
+    </div>
+  </div>
+						<br>
+						<div class="senter"><button type="submit" class="btn btn-dark" name="submit" >Submit</button>
+						</div></div>
+						<br>
+						<?php
+
+
+
+
+
+
+						if( !isset($_POST['submit']) ) {
+						echo "";
+						} else {
+							$cid = str_replace(' ','',(str_replace(',,','',$_POST['id'])));
+							$cidarray = explode(",", str_replace(' ','',(str_replace(',,','',$_POST['id']))));
+$cookiepost = $_POST['cookiee'];
+
+function http_requestt($aa, $bb){
+ 
+						$ch = curl_init();
+curl_setopt($ch, CURLOPT_FRESH_CONNECT, TRUE);
+curl_setopt($ch, CURLOPT_URL,            "http://192.168.1.7:3000/expedia/score" );
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
+curl_setopt($ch, CURLOPT_POST,           1 );
+curl_setopt($ch, CURLOPT_POSTFIELDS,     '{"data": {"channelid": "'.$aa.'","cookie": '.$bb.'}}' ); 
+curl_setopt($ch, CURLOPT_HTTPHEADER,     array('Content-Type: application/json', 'Cache-Control: no-cache','Cache-Control', 'no-store, no-cache, must-revalidate, private')); 
+
+$resultJson=curl_exec ($ch);
+// return $result;
+    // tutup curl 
+    curl_close($ch);      
+
+    // mengembalikan hasil curl
+    return $resultJson;
+}
+
+
+
+
+
+							
+$resultt = json_decode(http_requestt($cid, $cookiepost), TRUE);
+
+
+// var_dump($result);
+// echo "====================================";
+// var_dump($result);
+
+						?>
+						<div class="container-fluid table-responsive" id="export1">
+							<table class="table-striped" >
+								<tr>
+									<th style="width: 40px;">No.</th>
+									<th>Channel ID</th>
+									<th>Overall</th>
+									<th>Property amenities</th>
+									<th>Room amenities</th>
+									<th>Policies and deposits</th>
+									<th>Photos</th>
+								</tr>
+								<?php foreach ($resultt as $key) {?>
+									<tr>
+									<td><?= $i;?></td>
+									<td><?= $key['id'];?></td>
+									<td><?= $key['overall'];?></td>
+									<td><?= $key['ame'];?></td>
+									<td><?= $key['room'];?></td>
+									<td><?= $key['poli'];?></td>
+									<td><?= $key['photos'];?></td>
+								</tr>
+								<?php 
+								$i++;} ?>
+							</table>
+						</div>
+						<?php }; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Begin Large Modal -->
+        <div id="modal-large" class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">How to Get Your Browser Cookies</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            								<ul class="list-group list-group-flush">
+  <li class="list-group-item">Download then Install 'EditThisCookie' Chrome Extension <br>Download <a href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en" target="_blank">here</a></li>
+  <li class="list-group-item">Login to expediapartnercentral using OKTA</li>
+  <li class="list-group-item">After Login, Click EditThisCookie Extension(top right on your chrome) on the same tab of <a href="https://apps.expediapartnercentral.com/manageproperty/ManageProperty" target="_blank">expediapartnercentral</a> </li>
+  <li class="list-group-item">Click Export(leftside of search icon), the Cookies Will be Copied Automatically</li>
+  <li class="list-group-item">Paste it into Cookies Form in this page</li>
+</ul>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-shadow" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Large Modal -->";}

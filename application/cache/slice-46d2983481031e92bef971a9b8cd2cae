@@ -1,0 +1,55 @@
+a:3:{s:4:"time";i:1573178267;s:3:"ttl";i:3600;s:4:"data";s:1523:"<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"></script>
+<style src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" type="text/css"></style>
+<script src="<?php echo  base_url('assets/js/linechart.js') ; ?>"></script>
+<?php ?>
+       <div class="container table-responsive">
+  <table class="table-striped">
+  <thead>
+  <tr>
+      <th>No</th>
+      <th>NID</th>
+      <th>Validation</th>
+<!--       <th>Backlog From</th>
+      <th>Timestamp</th> -->
+ 
+  </tr>
+</thead>
+ <tbody>
+ <?php
+function cek_code($a, $codenya){
+  foreach ($codenya as $co){
+    if($co['code'] == $a){
+      echo $co['desc'];
+    }
+  }
+}
+
+?>
+
+<?php foreach ($zerobacklognidajax as $key): ?>
+  <tr>
+      <td><?php echo  $i ; ?></td>
+      <td><?php echo  $key['NID'] ; ?></td>
+      <td><?php foreach ($zerobacklognidvalidation as $key1): ?>
+            <?php if ($key['NID']==$key1['nid'] && $key1['category']==$_GET['channel']): ?>
+            <?php echo  '<b>['.$key1['production_severity'].']['.$key1['code'].']</b>' ; ?>
+            <?php echo  cek_code($key1['code'], $codenya) ; ?>
+            <?php echo  '<hr>' ; ?>
+            
+            
+            <?php endif; ?>
+      <?php endforeach; ?></td>
+<!--       <td><?php echo  $key['Channel'] ; ?></td>
+      <td><?php echo  $key['timestamp'] ; ?></td> -->
+      </tr>
+
+<?php
+$i++;
+?>
+<?php endforeach; ?>
+</tbody>
+          </table>
+        </div>
+
+";}

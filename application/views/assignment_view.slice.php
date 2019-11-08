@@ -1,0 +1,224 @@
+<div class="row" style="padding-right: 20px;padding-left: 20px;">
+	<div class="col-xl-12">
+<!-- Default -->
+								<div class="widget has-shadow">
+									<div class="widget-header bordered no-actions d-flex align-items-center">
+										<h4></h4>
+
+  <div align="center"><h1 align="center" style="display: inline-block;"><b></b></h1><button type="button" class="badge badge-info btn" data-toggle="modal" data-target="#examplemodalz" >query</button></div>
+<!-- Modal -->
+<div class="modal fade" id="examplemodalz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelz" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabelz">Query</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Outdated
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--  -->
+<br>
+
+
+</div>
+									<div class="widget-body">
+										<h6 align="center" class="text-muted font-italic">This table shows properties and the numbers assigned to each reviewer. Table below count the properties based on column "state_notes". All properties have fatal and warning [PO](code 303,312,824,826,825,827,900)</h6>
+<div class="container table-responsive" style="width: 400px;" id="export1">
+<table class="table-striped">
+<?php 
+// function check($email){
+// 	global $number;
+// if( (array_search("$email",array_column($number, 'state_notes')))===false){
+// echo "0";
+// }else{
+// echo $number [(array_search("$email",array_column($number, 'state_notes')))]['Total'];
+// };
+
+// }
+
+ ?>	
+ 	<tr>	
+		<th>Reviewer</th>
+		<th>Total</th>
+ 	</tr>
+ 	@foreach ($number as $key)
+  	 <tr>	
+		<td>{{ str_replace('assigned to ','',$key['state_notes']) }}</td>
+		<td>{{ $key['Total'] }}</td>
+ 	</tr>
+ 	@endforeach
+ </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--  -->
+
+<div class="row" style="padding-right: 20px;padding-left: 20px;">
+	<div class="col-xl-12">
+<!-- Default -->
+								<div class="widget has-shadow">
+									<div class="widget-header bordered no-actions d-flex align-items-center">
+										<h4></h4>
+
+  <div align="center"><h1 align="center" style="display: inline-block;"><b></b></h1><button type="button" class="badge badge-info btn" data-toggle="modal" data-target="#examplemodalz" >query</button></div>
+<!-- Modal -->
+<div class="modal fade" id="examplemodalz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelz" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabelz">Query</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--  -->
+<br>
+
+
+</div>
+									<div class="widget-body">
+	<!-- 									<h6 align="center" class="text-muted font-italic">This table shows properties and the numbers assigned to each reviewer. Table below count the properties based on column "state_notes". All properties have fatal and warning [PO](code 303,312,824,826,825,827,900)</h6> -->
+<div class="container-fluid table-responsive"  id="export1">
+  <div class="row">
+    <div class="col" align="center">
+<h5 align="center">Select Reviewer</h5>
+<div class="form-group">
+<form action="" method="get">
+	<div class="form-group">	
+	<select class="form-control form-control" name="reviewer" id="keyword" style="width: 25%; text-align: center;">
+	 	 <option value="none"></option>
+	 	 <option value="">All</option>
+ 		 <option>kurniawan.masaji@redawning.com</option>
+ 		 <option>sugeng.wiratno@redawning.com</option>
+ 		 <option>wakhid.hidayat@redawning.com</option>
+ 		 <option>puji.hervianto@redawning.com</option>
+ 		 <option>irvan.fauzi@redawning.com</option>
+ 		 <option>slamet.awaludin@redawning.com</option>
+ 		 <option>budi.pramono@redawning.com</option>
+ 		 <option>andhika.pangestu@redawning.com</option>
+ 		 <option>editya.novridian@redawning.com</option>
+ 		 <option>hesti.ardini@redawning.com</option>
+ 		 <option>arum.dyah@redawning.com</option> 
+ 		 <option>febria.setiana@redawning.com</option>
+ 		 <option>ulfa.nasyechatul@redawning.com</option>
+	</select>
+<!-- 	<div class="form-check">
+    <input type="checkbox" class="form-check-input" id="check" name="check" checked>
+    <label class="form-check-label" for="check" >Include [PENDING]</label>
+  	</div> -->
+	<div class="find2"><button type="submit" class="btn btn-secondary" name="find" id="find">Apply!</button></div>
+	</div>
+	</div>
+	</div>
+	</div>
+	</div>
+</form>
+<!-- </div> -->
+<div class="container-fluid table-responsive" id="export1">
+<table class="table-striped tabel2">
+	<tr>
+		<th>No.</th>
+		<th>NID</th>
+		<th>Title</th>
+		<th>Integration</th>
+		<th>E-mail</th>
+		<th>Company Name</th>
+		<th>UID</th>
+		<th>State name</th>
+		<!-- <th>State Notes</th> -->
+		<th>Mark</th>
+	</tr>
+	<?php $i = 1; ?>
+	<?php foreach( $propertiesPerUser as $row ) { ?>
+	<tr>
+		<td><?= $i; ?></td>
+		<td><?= $row["nid"]; ?></td>
+		<td><?= $row["Title"]; ?></td>
+		<td><?= $row["Integration"]; ?></td>
+		<td><?= $row["email"]; ?></td>
+		<td><?= $row["Company Name"]; ?></td>
+		<td><?= $row["uid"]; ?></td>
+		<td><?= $row["state_name"]; ?></td>
+		<!-- <td><?php echo str_replace("assigned to ","",$row["state_notes"]); ?></td> -->
+		<td>
+					@foreach ($nids as $nid)
+					@if($nid['nid']==$row["nid"])
+					{{ $nid['state_notes'] }}
+					@endif
+					@endforeach
+
+							</td>
+	</tr>
+	<?php $i++; ?>
+	<?php } ?>
+</table>
+<!--     <script src="redawning/assets/js/jquery.min.js"></script>
+    <script src="redawning/assets/js/bootstrap.min.js"></script> -->
+
+
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+    $("#find").click(function(){
+        // 
+		$(this).hide();
+		$(".tabel2").fadeOut();
+        $(".find2").append('<div align="center"><img src="{{ base_url('assets/loader.gif')}}" class="loader" style="width: 3%; height: auto;"></div>');
+    });
+});
+
+
+
+</script>
+    <script type="text/javascript">
+    	// $(".assignment").load("assignment.php .container-fluid");
+// $(document).ready(function(){
+//     $(".assignment").load("assignment.php .container-fluid");
+//     });
+
+
+
+    	document.getElementById('keyword').value = "<?php echo $_GET['reviewer']; ?>"
+    	document.getElementById("check").checked=
+<?php if(!isset($_GET['check'])){
+echo "false";
+}
+ else {echo "true";
+}
+ ?>;
+    </script>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<!--  -->
+
+

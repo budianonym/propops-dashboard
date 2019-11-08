@@ -1,0 +1,90 @@
+<!-- End Row -->
+<div class="row" style="padding-right: 20px;padding-left: 20px;">
+	<div class="col-xl-12">
+		<!-- Default -->
+		<div class="widget has-shadow">
+			<div class="widget-header bordered no-actions d-flex align-items-center">
+				<h4></h4>
+				
+				
+				<button type="button" class="badge badge-info btn" data-toggle="modal" data-target="#modal-large">How to Get Your Browser Cookies</button>
+				<!-- Modal -->
+				<div class="modal fade" id="examplemodalz" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelz" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabelz">Query</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+-
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="widget-body">
+				<h6 align="center" class="text-muted font-italic">Bulk Upload for Facilities Name Conversion. This Tool Require Your Browser Cookie. Click Button Above For Details</h6>
+<!--  -->
+
+
+
+<?php echo $error;?>
+
+<?php echo form_open_multipart('upload/do_upload');?>
+<div class="form-group">
+<input type="file" name="userfile" size="20" />
+
+<br /><br />
+<textarea class="form-control " name="cookiee" id="cookiee" placeholder="Paste the Cookies Here" required><?php ?></textarea>
+<div class="senter"><button type="submit" class="btn btn-dark" name="submit" >Submit</button>
+						</div>
+</div>
+</form>
+<?php
+$file = "facilityconv1.csv"; //Let say If I put the file name Bang.png
+echo "<a href='dondot.php?nama=".$file."'>download sample csv here</a> ";
+?>
+
+<p>query to get data for the csv : SELECT * FROM radb.facility_converter;</p>
+<!--  -->
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Row -->
+
+<!-- Begin Large Modal -->
+<div id="modal-large" class="modal fade">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">How to Get Your Browser Cookies</h4>
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">×</span>
+                            <span class="sr-only">close</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            								<ul class="list-group list-group-flush">
+  <li class="list-group-item">Download then Install 'EditThisCookie' Chrome Extension <br>Download <a href="https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en" target="_blank">here</a></li>
+  <li class="list-group-item">Login to admin.redawning.com</li>
+  <li class="list-group-item">After Login, Click EditThisCookie Extension(top right on your chrome) on the same tab of <a href="https://admin.redawning.com/admin/config-redawning/facility-name-conversion" target="_blank">Facility Name Conversion</a> </li>
+  <li class="list-group-item">Click Export(leftside of search icon), the Cookies Will be Copied Automatically</li>
+  <li class="list-group-item">Paste it into Cookies Form in this page</li>
+</ul>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-shadow" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Large Modal -->
