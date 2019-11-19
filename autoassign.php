@@ -136,7 +136,7 @@ foreach ($nids as $key) {
 }
 // // var_dump($nid);
 // $aa = 'assigned to budi.pramono@redawning.com';
-$assign = ["assigned to slamet.awaludin@redawning.com", "assigned to kurniawan.masaji@redawning.com", "assigned to puji.hervianto@redawning.com"];
+$assign = ["assigned to slamet.awaludin@redawning.com", "assigned to kurniawan.masaji@redawning.com", "assigned to puji.hervianto@redawning.com","assigned to budi.pramono@redawning.com","assigned to arum.dyah@redawning.com"];
 // echo $assign[1]['kitchen'];
 //$assign = ['-test1', '-test2', '-test3', '-test4']; 
 $number = count($assign)-1;

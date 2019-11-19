@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1573178267;s:3:"ttl";i:3600;s:4:"data";s:1523:"<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+a:3:{s:4:"time";i:1574044060;s:3:"ttl";i:3600;s:4:"data";s:1523:"<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.css"></script>
 <style src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" type="text/css"></style>
 <script src="<?php echo  base_url('assets/js/linechart.js') ; ?>"></script>

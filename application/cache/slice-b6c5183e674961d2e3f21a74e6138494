@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1573176508;s:3:"ttl";i:3600;s:4:"data";s:5374:"<!-- End Page Header -->
+a:3:{s:4:"time";i:1574127710;s:3:"ttl";i:3600;s:4:"data";s:5374:"<!-- End Page Header -->
 <div class="row">
 	<div class="col-xl-12">
 		<!-- Default -->
@@ -50,7 +50,7 @@ function http_requestt($aa, $bb){
  
 						$ch = curl_init();
 curl_setopt($ch, CURLOPT_FRESH_CONNECT, TRUE);
-curl_setopt($ch, CURLOPT_URL,            "http://192.168.1.7:3000/expedia/score" );
+curl_setopt($ch, CURLOPT_URL,            "http://192.168.1.7:3333/expedia/score" );
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
 curl_setopt($ch, CURLOPT_POST,           1 );
 curl_setopt($ch, CURLOPT_POSTFIELDS,     '{"data": {"channelid": "'.$aa.'","cookie": '.$bb.'}}' ); 

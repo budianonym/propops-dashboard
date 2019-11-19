@@ -13,7 +13,7 @@ function koneksi1() {
     }
     return $rows1;
   }
-  echo 'dddddd';
+  echo 'ddddddbdfbdfbdfbdfbdfd';
   //endfungsi1
   //query datas
   $qq = query1("INSERT INTO `backlognid` (`NID`, `Channel`, `timestamp`) VALUES

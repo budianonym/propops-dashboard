@@ -50,7 +50,7 @@ function http_requestt($aa, $bb){
  
 						$ch = curl_init();
 curl_setopt($ch, CURLOPT_FRESH_CONNECT, TRUE);
-curl_setopt($ch, CURLOPT_URL,            "http://192.168.1.7:3000/expedia/score" );
+curl_setopt($ch, CURLOPT_URL,            "http://192.168.1.7:3333/expedia/score" );
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1 );
 curl_setopt($ch, CURLOPT_POST,           1 );
 curl_setopt($ch, CURLOPT_POSTFIELDS,     '{"data": {"channelid": "'.$aa.'","cookie": '.$bb.'}}' ); 
