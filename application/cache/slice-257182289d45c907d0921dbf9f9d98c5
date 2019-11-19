@@ -1,4 +1,4 @@
-a:3:{s:4:"time";i:1574135647;s:3:"ttl";i:3600;s:4:"data";s:15516:"    <?php 
+a:3:{s:4:"time";i:1574143648;s:3:"ttl";i:3600;s:4:"data";s:15516:"    <?php 
 	// session_start();
 	// if($_SESSION['status']!="login"){
 	// 	$_SESSION['redirect_url'] = str_replace('/index.php','',$_SERVER['PHP_SELF']);
